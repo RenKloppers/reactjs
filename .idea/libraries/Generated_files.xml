@@ -1,0 +1,89 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/amdLoader.js" />
+        <item url="file://$PROJECT_DIR$/js/View.js" />
+        <item url="file://$PROJECT_DIR$/js/TypedReact.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/mediators/ResetButtonMediator.js" />
+        <item url="file://$PROJECT_DIR$/js/collections.js" />
+        <item url="file://$PROJECT_DIR$/js/controller/LogModelUpdateCommand.js" />
+        <item url="file://$PROJECT_DIR$/js/controller/SetupViewCommand.js" />
+        <item url="file://$PROJECT_DIR$/js/.baseDir.js" />
+        <item url="file://$PROJECT_DIR$/js/reference.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/interfaces/IResetButtonView.js" />
+        <item url="file://$PROJECT_DIR$/js/model/IBowlingGameRollModel.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/view/ResetButtonView.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/mediators/ButtonMediator.js" />
+        <item url="file://$PROJECT_DIR$/js/model/BowlingGameRollModel.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/.baseDir.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/view/ButtonView.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/Container.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/LifecycleSignalMixin.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/view/BowlingGameView.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/interfaces/IButtonView.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/ViewBase.js" />
+        <item url="file://$PROJECT_DIR$/js/Main.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/cacheUtils.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/tests/BowlingGameViewTests.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/mediators/BowlingGameMediator.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/reference.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/transformers.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/templateCache.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/ts.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/interfaces/IBowlingGameView.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/compile.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/html2ts.js" />
+        <item url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/utils.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/view/.baseDir.js" />
+        <item url="file://$PROJECT_DIR$/js/ReactMediatorMap.js" />
+        <item url="file://$PROJECT_DIR$/js/ui/interfaces/.baseDir.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/ui/BatManView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/IBatManView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/Banana.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/BatManMediator.js" />
+      <root url="file://$PROJECT_DIR$/js/model/IFlipFlopModel.js" />
+      <root url="file://$PROJECT_DIR$/js/model/FlipFlopModel.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/amdLoader.js" />
+      <root url="file://$PROJECT_DIR$/js/View.js" />
+      <root url="file://$PROJECT_DIR$/js/TypedReact.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/mediators/ResetButtonMediator.js" />
+      <root url="file://$PROJECT_DIR$/js/collections.js" />
+      <root url="file://$PROJECT_DIR$/js/controller/LogModelUpdateCommand.js" />
+      <root url="file://$PROJECT_DIR$/js/controller/SetupViewCommand.js" />
+      <root url="file://$PROJECT_DIR$/js/.baseDir.js" />
+      <root url="file://$PROJECT_DIR$/js/reference.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/interfaces/IResetButtonView.js" />
+      <root url="file://$PROJECT_DIR$/js/model/IBowlingGameRollModel.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/view/ResetButtonView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/mediators/ButtonMediator.js" />
+      <root url="file://$PROJECT_DIR$/js/model/BowlingGameRollModel.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/.baseDir.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/view/ButtonView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/Container.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/LifecycleSignalMixin.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/view/BowlingGameView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/interfaces/IButtonView.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/ViewBase.js" />
+      <root url="file://$PROJECT_DIR$/js/Main.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/cacheUtils.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/tests/BowlingGameViewTests.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/mediators/BowlingGameMediator.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/reference.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/transformers.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/templateCache.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/ts.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/interfaces/IBowlingGameView.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/compile.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/html2ts.js" />
+      <root url="file://$PROJECT_DIR$/node_modules/grunt-ts/tasks/modules/utils.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/view/.baseDir.js" />
+      <root url="file://$PROJECT_DIR$/js/ReactMediatorMap.js" />
+      <root url="file://$PROJECT_DIR$/js/ui/interfaces/.baseDir.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

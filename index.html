@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://fb.me/react-0.11.2.js"></script>
+		<script src="js/collections.js"></script>
+		<script src="js/TypedReact.js"></script>
+		<script src="js/Debug.js"></script>
+		<script src="js/Reflector.js"></script>
+		<script src="js/Injector.js"></script>
+		<script src="js/Signals.js"></script>
+		<script src="js/MVC.js"></script>
+		<script src="js/ReactMediatorMap.js"></script>
+
+		<script src="js/model/BowlingGameRollModel.js"></script>
+
+		<script src="js/ui/ViewBase.js"></script>
+		<script src="js/ui/LifecycleSignalMixin.js"></script>
+
+		<script src="js/ui/view/BowlingGameView.js"></script>
+		<script src="js/ui/view/ButtonView.js"></script>
+		<script src="js/ui/view/ResetButtonView.js"></script>
+
+		<script src="js/ui/mediators/BowlingGameMediator.js"></script>
+		<script src="js/ui/mediators/ButtonMediator.js"></script>
+		<script src="js/ui/mediators/ResetButtonMediator.js"></script>
+
+		<script src="js/controller/SetupViewCommand.js"></script>
+		<script src="js/controller/LogModelUpdateCommand.js"></script>
+
+		<script src="js/View.js"></script>
+		<script src="js/Main.js"></script>
+		<script>
+			function r(f) {
+				/in/.test("" + document.readyState) ? setTimeout('r(' + f + ')', 9) : f()
+			}
+
+			r(Main.startup);
+		</script>
+
+		<style>
+			body {
+				background-image: url('assets/bg.jpg');
+				background-repeat: no-repeat;
+				background-color:#D5CECE;
+			}
+
+			 .btn {
+				 display: block;
+				 position: fixed;
+				 height: 500px;
+				 top: 500px;
+				 left: 300px;
+			 }
+
+			.resetbtn {
+				display: block;
+				position: fixed;
+				top: 500px;
+				left: 400px;
+			}
+
+
+			table.gridtable {
+				font-family: verdana,arial,sans-serif;
+				font-size:15px;
+				color:#000000;
+				border-width: 1px;
+				border-color: #666666;
+				border-collapse: collapse;
+			}
+			table.gridtable th {
+				border-width: 1px;
+				padding: 0px;
+				border-style: solid;
+				border-color: #666666;
+				background-color: #dedede;
+			}
+			table.gridtable td {
+				border-width: 2px;
+				padding: 1px;
+				border-style: solid;
+				border-color: #666666;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<div id="bowling"></div>
+
+		<table class="gridtable" width="791" border="0" cellspacing="0" cellpadding="0">
+			<tbody>
+			<tr>
+				<td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td align="center">1</td>
+					</tr>
+					</tbody>
+				</table>
+					<table width="50" border="1" cellspacing="0" cellpadding="0">
+						<tbody>
+						<tr>
+							<td><div id="frame0"></div></td>
+							<td><div id="frame1"></div></td>
+						</tr>
+						</tbody>
+					</table>
+					<table width="50" border="1" cellspacing="0" cellpadding="0">
+						<tbody>
+						<tr>
+							<td width="107"><div id="score0"></div></td>
+						</tr>
+						</tbody>
+					</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">2</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame2"></div></td>
+						<td><div id="frame3"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score1"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">3</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame4"></div></td>
+						<td><div id="frame5"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score2"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">4</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame6"></div></td>
+						<td><div id="frame7"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score3"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">5</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame8"></div></td>
+						<td><div id="frame9"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score4"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">6</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame10"></div></td>
+						<td><div id="frame11"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score5"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">7</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame12"></div></td>
+						<td><div id="frame13"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score6"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">8</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame14"></div></td>
+						<td><div id="frame15"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score7"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="51"><table width="50" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td align="center">9</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td><div id="frame16"></div></td>
+						<td><div id="frame17"></div></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="50" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="107"><div id="score8"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="1"><td width="63"><table width="65" border="1" cellspacing="0" cellpadding="0">
+				<tbody>
+				<tr>
+					<td width="59" align="center">10</td>
+				</tr>
+				</tbody>
+			</table>
+				<table width="65" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="19"><div id="frame18"></td>
+						<td width="21"><div id="frame19"></td>
+						<td width="17"><div id="frame20"></td>
+					</tr>
+					</tbody>
+				</table>
+				<table width="65" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td width="61"><div id="score9"></td>
+					</tr>
+					</tbody>
+				</table></td>
+				<td width="77"><table width="77" border="1" cellspacing="0" cellpadding="0">
+					<tbody>
+					<tr>
+						<td>Max Score</td>
+					</tr>
+					<tr>
+						<td><div id="maxscore"></td>
+					</tr>
+					</tbody>
+				</table>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+
+		<div id="list"></div>
+
+		<div id="bowls">
+			<canvas id="myCanvas" width="170" height="130" style="position: fixed; bottom: 52%; left: 28.5%; border: hidden"">
+				Your browser does not support the HTML5 canvas tag.</canvas>
+		</div>
+
+
+
+
+		<div class="btn" id="buttons"></div>
+		<div class="resetbtn" id="resetbutton"></div>
+
+	</body>
+</html>
